@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
 </head>
-<body style="background-color: rgb(78, 9, 99);">
+<body>
     <header>
-        <div>
+        <div class="container">
             <figure>
                 <img src="./assets/img/logo.png" alt="Kenzie Academy Logo">
             </figure>
@@ -18,14 +19,16 @@
     </header>
 
     <main>
-        <section>
-            <input type="text" placeholder="Nome">
-            <input type="email" placeholder="Email">
-            <input type="number" placeholder="Telefone">
-            <button>Adicionar</button>
+        <section class="secaoForm">
+            <div class="secaoForm_Form">
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="Email">
+                <input type="number" placeholder="Telefone">
+                <button>Adicionar</button>
+            </div>
         </section>
-        <section>
-            <p>Lista de Contatos</p>
+        <section class="secaoListaContatos">
+            <ul class="secaoListaContatos_Lista">Lista de Contatos</ul>
         </section>
     </main>
 </body>

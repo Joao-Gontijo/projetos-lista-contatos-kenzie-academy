@@ -1,0 +1,37 @@
+body{}
+
+/* elementos do header */
+header{
+    background-color: #162b7b;
+}
+
+/* Criou o espaçamento na borda dentro do container */
+header .container{ 
+    width: 100%;
+    max-width: 1000px;
+    /* altera o espaçamento entre elemento e outro */
+    /* 0 pra cima e pra baixo - auto para esquerda e direta */
+    margin: 0 auto;
+    /* topo direita baixo esquerda */
+    /* margin: 10px 20px 15px 5px */
+    /* margin topo direita-esquerda baixo */
+    /* margin: 10px 20px 15px*/
+    padding: 20px 10px;
+}
+
+header figure{
+
+}
+
+header figure img{
+    width: 100%;
+    max-width: 150px;
+}
+
+header h1{
+    color: white;
+    font-size: 35px;
+    margin-top: 10px;
+}
+
+/*  */
