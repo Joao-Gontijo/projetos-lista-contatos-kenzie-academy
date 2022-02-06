@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    
+    
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css">
 </head>
@@ -28,7 +34,17 @@
             </div>
         </section>
         <section class="secaoListaContatos">
-            <ul class="secaoListaContatos_Lista">Lista de Contatos</ul>
+            <ul class="secaoListaContatos_Lista">
+                <li>
+                    <p>Não há contatos na sua lista!</p>
+                </li>
+                <li>
+                    <button id=removerContato></button>
+                    <h2>Nome</h2>
+                    <p>Email</p>
+                    <span>Telefone</span>
+                </li>
+            </ul>
         </section>
     </main>
 </body>

@@ -23,7 +23,7 @@ O projeto se trata de uma lista de contatos, adicionados por um botão a um arra
 
 ### Cores
 
-- Azul principal: #162b7b;
+- Roxo principal: #36167b;
 - Branco: #ffffff;
 - Branco principal com transparência: hsl(0deg 0% 100% / 90%);
 - Azul principal com transparência: hsl(228deg 70% 28% / 10%);

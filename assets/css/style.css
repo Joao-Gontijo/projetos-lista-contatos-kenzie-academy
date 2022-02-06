@@ -1,8 +1,10 @@
-body{}
+body{
+    font-family: 'Quicksand', sans-serif;
+}
 
 /* elementos do header */
 header{
-    background-color: #162b7b;
+    background-color: #36167b;
 }
 
 /* Criou o espaçamento na borda dentro do container */
@@ -34,4 +36,92 @@ header h1{
     margin-top: 10px;
 }
 
-/*  */
+/* elementos do main */
+
+main{
+    display: flex;
+    height: 82.6vh;
+}
+
+main section{
+    width: 50%;
+    padding: 100px 40px;
+}
+
+.secaoForm{
+    background-color: #36167b;
+}
+
+.secaoForm_Form{
+    /* alinhar elementos em coluna */
+    display: flex; 
+    flex-direction: column;
+    width: 450px;
+    /* joga os elementos totalmente para a direita */
+    margin: 0 0 0 auto;
+}
+
+.secaoForm_Form input{
+    margin-bottom: 10px;
+    height: 35px;
+    border: none;
+    border-radius: 2px;
+    padding: 0 10px;
+}
+
+.secaoForm_Form button{
+    height: 35px;
+    margin-top: 15px;
+    background-color: hsl(0deg 0% 100% / 90%);
+    border: none;
+    border-radius: 2px;
+    /* transforma os textos em maiusculo */
+    text-transform: uppercase;
+    /* muda a setinha em cima do botão */
+    cursor: pointer;
+}
+
+/* lsita de contatos */
+
+.secaoListaContatos{
+    background-color: hsl(228deg 70% 28% / 10%);
+}
+
+.secaoListaContatos_Lista{
+    width: 100%;
+    max-width: 450px;
+}
+
+.secaoListaContatos_Lista li{
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+.secaoListaContatos_Lista li p{
+    margin: 5px 0;
+}
+
+.secaoListaContatos_Lista li h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.secaoListaContatos_Lista li button{
+    float: right;
+    background-image: url(../img/trash.svg);
+    width: 28px;
+    height: 28px;
+    background-size: 14px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: hsl(0deg 95% 44% / 5%);
+    border: 2px solid #de4b09;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.secaoListaContatos_Lista li span{
+    
+}
