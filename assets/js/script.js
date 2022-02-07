@@ -8,21 +8,20 @@ const inputTelefone = document.getElementById('telefone');
 
 const listaContatosLocal = [];
 
-const novoContato = {
-    nome: '',
-    email: '',
-    telefone: ''
-}
-
-
-listaContatosLocal.push(novoContato);
-
 function adicionarContato(){
     const valorNome = inputNome.value;
     const valorEmail = inputEmail.value;
     const valorTelefone = inputTelefone.value;
 
-    console.log(valorNome + " " + valorEmail + " " + valorTelefone);
+    const novoContato = {
+        nome: valorNome,
+        email: valorEmail,
+        telefone: valorTelefone
+    }
+
+    listaContatosLocal.push(novoContato);
+    
+    console.log(listaContatosLocal);
 }
 
 btn.addEventListener('click', adicionarContato);
