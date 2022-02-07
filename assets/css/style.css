@@ -81,6 +81,11 @@ main section{
     cursor: pointer;
 }
 
+.secaoForm_Form p{
+    color: red;
+    margin-bottom: 10px;
+}
+
 /* lsita de contatos */
 
 .secaoListaContatos{
