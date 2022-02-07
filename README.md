@@ -5,6 +5,7 @@ Projeto desenvolvido na parte 6 da maratona de programação da Kenzie Academy B
 ## O Projeto
 
 O projeto se trata de uma lista de contatos, adicionados por um botão a um array de um objeto pessoa em JavaScript.
+Estrutura do README pela Kenzie Academy.
 
 ### Estrutura de arquivos 
 
@@ -34,7 +35,7 @@ O projeto se trata de uma lista de contatos, adicionados por um botão a um arra
 
 - box-shadow: 3px 3px 14px -14px #4f4f4f
 
-## Layout
+## Layout Sugerido
 
 - [Layout](./assets/img/layout.png)
 
