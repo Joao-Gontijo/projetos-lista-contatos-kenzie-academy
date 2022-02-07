@@ -11,6 +11,9 @@ const telefoneInvalido = document.querySelector('.inputTelefoneClass');
 // const listaContatosLocal = [];
 let dadosSalvos = JSON.parse(localStorage.getItem('contato'));
 let id = 0;
+for(let i = 0; i < dadosSalvos.length; i++){
+    id++;
+}
 
 function adicionarContato(){
     nomeInvalido.innerHTML = '';
@@ -112,9 +115,10 @@ function criarNaTela(contato){
 function removerContato(evento){
     const botaoClicado = evento.target;
     const contatoClicado = botaoClicado.parentElement;
-    const idContatoCliado = contatoClicado.dataset.id;
-    
-    const contatoRemovido = dadosSalvos.find((contato) => contato.id == idContatoCliado);
+    const idContatoClicado = contatoClicado.dataset.id;
+    console.log(idContatoClicado);
+
+    const contatoRemovido = dadosSalvos.find((contato) => contato.id == idContatoClicado);
     const posicaoContatoRemovido = dadosSalvos.indexOf(contatoRemovido);
     dadosSalvos.splice(posicaoContatoRemovido, 1);
     localStorage.setItem('contato', JSON.stringify(dadosSalvos));
