@@ -27,10 +27,10 @@
     <main>
         <section class="secaoForm">
             <div class="secaoForm_Form">
-                <input type="text" placeholder="Nome">
-                <input type="email" placeholder="Email">
-                <input type="number" placeholder="Telefone">
-                <button>Adicionar</button>
+                <input id="nome" type="text" placeholder="Nome">
+                <input id="email" type="email" placeholder="Email">
+                <input id="telefone" type="number" placeholder="Telefone">
+                <button id="btn">Adicionar</button>
             </div>
         </section>
         <section class="secaoListaContatos">
@@ -39,7 +39,7 @@
                     <p>Não há contatos na sua lista!</p>
                 </li>
                 <li>
-                    <button id=removerContato></button>
+                    <button onclick="adicionarContato()" id=removerContato></button>
                     <h2>Nome</h2>
                     <p>Email</p>
                     <span>Telefone</span>
@@ -47,5 +47,8 @@
             </ul>
         </section>
     </main>
+
+    <!-- importando js -->
+    <script src="./assets/js/script.js"></script>
 </body>
 </html>
