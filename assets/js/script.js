@@ -3,14 +3,13 @@ const inputNome = document.getElementById('nome');
 const inputEmail = document.getElementById('email');
 const inputTelefone = document.getElementById('telefone');
 
-const meuStorage = localStorage;
-
 const listaContatosContainer = document.querySelector('.secaoListaContatos_Lista');
 const nomeInvalido = document.querySelector('.inputNomeClass');
 const emailInvalido = document.querySelector('.inputEmailClass');
 const telefoneInvalido = document.querySelector('.inputTelefoneClass');
 
-const listaContatosLocal = [];
+// const listaContatosLocal = [];
+let dadosSalvos = JSON.parse(localStorage.getItem('contato'));
 let id = 0;
 
 function adicionarContato(){
@@ -42,8 +41,9 @@ function adicionarContato(){
         telefoneInvalido.appendChild(p);
     } else {
         id++;
-        listaContatosLocal.push(novoContato);
-        
+        dadosSalvos.push(novoContato);
+        localStorage.setItem('contato', JSON.stringify(dadosSalvos));
+
         renderizarLista();
 
         inputNome.value = '';
@@ -58,17 +58,28 @@ btn.addEventListener('click', adicionarContato);
 function renderizarLista(){
     listaContatosContainer.innerHTML = '';
     
-    if(listaContatosLocal.length !== 0){
-        for(let i = 0; i < listaContatosLocal.length; i++){
-            criarNaTela(listaContatosLocal[i]);
+    if(dadosSalvos.length > 0){
+        for(let i = 0; i < dadosSalvos.length; i++){
+            criarNaTela(dadosSalvos[i]);
         }
     } else {
         const listaVazia = `<li>
             <p>Não há contatos na sua lista!</p>
-        </li>`
+        </li>`;
 
         listaContatosContainer.innerHTML = listaVazia;
     }
+    // if(listaContatosLocal.length !== 0){
+    //     for(let i = 0; i < listaContatosLocal.length; i++){
+    //         criarNaTela(listaContatosLocal[i]);
+    //     }
+    // } else {
+    //     const listaVazia = `<li>
+    //         <p>Não há contatos na sua lista!</p>
+    //     </li>`;
+
+    //     listaContatosContainer.innerHTML = listaVazia;
+    // }
 }
 
 function criarNaTela(contato){
@@ -102,16 +113,24 @@ function removerContato(evento){
     const botaoClicado = evento.target;
     const contatoClicado = botaoClicado.parentElement;
     const idContatoCliado = contatoClicado.dataset.id;
-    //find procura na lista o primeiro objeto onde for exatamente igual a condição
-    const contatoRemovido = listaContatosLocal.find((contato) => 
-        contato.id == idContatoCliado);
-    //retorna a posição do contato na lista
-    const posicaoContatoRemovido = listaContatosLocal.indexOf(contatoRemovido);
-
-    //retira o elemento da lista
-    listaContatosLocal.splice(posicaoContatoRemovido, 1);
+    
+    const contatoRemovido = dadosSalvos.find((contato) => contato.id == idContatoCliado);
+    const posicaoContatoRemovido = dadosSalvos.indexOf(contatoRemovido);
+    dadosSalvos.splice(posicaoContatoRemovido, 1);
+    localStorage.setItem('contato', JSON.stringify(dadosSalvos));
 
     renderizarLista();
+
+    // //find procura na lista o primeiro objeto onde for exatamente igual a condição
+    // const contatoRemovido = listaContatosLocal.find((contato) => 
+    //     contato.id == idContatoCliado);
+    // //retorna a posição do contato na lista
+    // const posicaoContatoRemovido = listaContatosLocal.indexOf(contatoRemovido);
+
+    // //retira o elemento da lista
+    // listaContatosLocal.splice(posicaoContatoRemovido, 1);
+
+    // renderizarLista();
 }
 
-renderizarLista();
+renderizarLista(); 

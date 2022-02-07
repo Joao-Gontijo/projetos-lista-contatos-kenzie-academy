@@ -90,6 +90,7 @@ main section{
 
 .secaoListaContatos{
     background-color: hsl(228deg 70% 28% / 10%);
+    overflow-y: auto;
 }
 
 .secaoListaContatos_Lista{
